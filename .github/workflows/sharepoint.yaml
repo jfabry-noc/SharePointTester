@@ -11,8 +11,9 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Copy to SharePoint
-      uses: jfabry-noc/SharePointOnlineCopy@da57060da5e36514c60eae2dc3393ec863c7d9fc
+      uses: jfabry-noc/SharePointOnlineCopy@9858451cb5571556c1b999a5e7d68382e883e911
       with:
+       archive_prefix: testrepo
        spobkp_authority: ${{ secrets.SPOBKP_AUTHORITY }}
        spobkp_endpoint: ${{ secrets.SPOBKP_ENDPOINT }}
        spobkp_clientid: ${{ secrets.SPOBKP_CLIENTID }}
