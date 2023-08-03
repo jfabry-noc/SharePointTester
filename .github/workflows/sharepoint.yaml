@@ -10,10 +10,10 @@ jobs:
     - name: Cloning repo
       uses: actions/checkout@v2
 
-    - name: Publish to Sharepoint
-      uses: obrassard/action-sharepoint-publish@v1.1.1
+    - name: Copy to SharePoint
+      uses: jfabry-noc/SharePointOnlineCopy
       with:
-       site_url: 'https://stepcgllc.sharepoint.com/sites/STEPCGNOC'
-       library_folder: 'Shared Documents/Dashboard Scripts'
-       sharepoint_client_id: ${{ secrets.CLIENTID }}
-       sharepoint_client_secret: ${{ secrets.CLIENTSECRET }}
+       spobkp_authority: ${{ secrets.SPOBKP_AUTHORITY }}
+       spobkp_endpoint: ${{ secrets.SPOBKP_ENDPOINT }}
+       spobkp_clientid: ${{ secrets.SPOBKP_CLIENTID }}
+       spobkp_secret: ${{ secrets.SPOBKP_SECRET }}
