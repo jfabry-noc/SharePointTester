@@ -11,7 +11,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Copy to SharePoint
-      uses: jfabry-noc/SharePointCopy@4d738cacad831a687958c7f219d3c4fa0db1cf4e
+      uses: jfabry-noc/SharePointCopy@69628af78e59c4d813591bd3821cfbd987dc64e9
       with:
        tenant_id: ${{ secrets.TENANT_ID }}
        spo_path: ${{ secrets.SPO_PATH }}
