@@ -11,10 +11,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Copy to SharePoint
-      uses: jfabry-noc/SharePointOnlineCopy@9858451cb5571556c1b999a5e7d68382e883e911
+      uses: jfabry-noc/SharePointCopy@4d738cacad831a687958c7f219d3c4fa0db1cf4e
       with:
-       archive_prefix: testrepo
-       spobkp_authority: ${{ secrets.SPOBKP_AUTHORITY }}
-       spobkp_endpoint: ${{ secrets.SPOBKP_ENDPOINT }}
-       spobkp_clientid: ${{ secrets.SPOBKP_CLIENTID }}
-       spobkp_secret: ${{ secrets.SPOBKP_SECRET }}
+       tenant_id: ${{ secrets.TENANT_ID }}
+       spo_path: ${{ secrets.SPO_PATH }}
+       client_id: ${{ secrets.CLIENT_ID }}
+       client_secret: ${{ secrets.CLIENT_SECRET }}
+       logging: DEBUG
